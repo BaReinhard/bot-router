@@ -32,3 +32,5 @@ try {
     console.log("Error Ocurred")
     console.log(err);
 }
+
+app.listen(process.env.PORT || 8080);
