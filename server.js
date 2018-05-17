@@ -4,14 +4,14 @@ const axios = require('axios');
 var app = express();
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-    console.log(req.body);
-    if (req.body.token === process.env.GSUITE_TOKEN) {
-        next();
-    } else {
-        res.status(401).send("Incorrect TOKEN provided, access denied");
-    }
-})
+// app.use((req, res, next) => {
+//     console.log(req.body);
+//     if (req.body.token === process.env.GSUITE_TOKEN) {
+//         next();
+//     } else {
+//         res.status(401).send("Incorrect TOKEN provided, access denied");
+//     }
+// })
 try {
 
     // Handle post
